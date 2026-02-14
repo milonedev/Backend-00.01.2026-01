@@ -604,27 +604,22 @@
       </div>
     </section>
 
-    <!-- ======= Ejercicio 39 ======= -->
+    <!-- ======= Ejercicio 37 ======= -->
     <section class="max-w-2xl mx-auto mt-12 px-4">
       <!-- Encabezado desplegable -->
       <button
-        data-ejercicio="ej39"
+        data-ejercicio="ej37"
         class="btn-accordion w-full flex items-center gap-4 p-4 bg-gray-800 rounded-2xl cursor-pointer hover:bg-gray-750 transition-colors group"
       >
         <span
           class="w-12 h-12 rounded-xl bg-accent/15 text-accent font-bold flex items-center justify-center shrink-0"
-          >39</span
+          >37</span
         >
         <p class="text-sm md:text-base flex-1">
-          Hacer un algoritmo en JavaScript que cumpla con la aproximación del
-          número pi con la serie de Gregory-Leibniz. La formula que se debe
-          aplicar es:
-          <br />
-          Pi = (4/1) - (4/3) + (4/5) - (4/7) + (4/9) - (4/11) + (4/13) - (4/15)
-          ...
+          Hacer un algoritmo en JavaScript para conseguir el M.C.D de un número por medio del algoritmo de Euclides.
         </p>
         <svg
-          id="arrow-ej39"
+          id="arrow-ej37"
           class="accordion-arrow w-5 h-5 text-gray-400 shrink-0"
           fill="none"
           stroke="currentColor"
@@ -636,19 +631,19 @@
       </button>
 
       <!-- Contenido desplegable -->
-      <div class="accordion-content" id="ej39">
+      <div class="accordion-content" id="ej37">
         <div class="mt-3 space-y-4">
           <!-- Input + Botón -->
           <div class="flex flex-row justify-center items-center gap-4 py-2">
             <input
               type="text"
-              id="input_ej39"
+              id="input_ej37"
               placeholder="Ingresa el número de horas trabajadas:"
               class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-full max-w-xs outline-none"
             />
             <button
-              id="btn_ej39"
-              data-resultado="resultado_ej39"
+              id="btn_ej37"
+              data-resultado="resultado_ej37"
               class="bg-blue-500 px-6 py-2.5 text-white text-sm font-medium rounded-lg hover:bg-blue-400 cursor-pointer transition-all duration-300 shrink-0"
             >
               Enviar
@@ -657,7 +652,92 @@
 
           <!-- Resultado -->
           <div
-            id="resultado_ej39"
+            id="resultado_ej37"
+            class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
+          ></div>
+
+          <!-- Código -->
+          <div class="bg-gray-800 shadow-xl rounded-2xl overflow-hidden">
+            <!-- <pre
+              class="p-4 text-sm overflow-x-auto"
+            ><code><span class="cm text-gray-500">// 1. Capturamos los elementos del DOM</span>
+<span class="fn">const</span> <span class="el">btnHackaton03</span> = document.<span class="ev">getElementById</span>(<span class="st">'btn_hackaton03'</span>);
+<span class="fn">const</span> <span class="el">inputHackaton03</span> = document.<span class="ev">getElementById</span>(<span class="st">'input_hackaton03'</span>);
+
+<span class="cm text-gray-500">// 2. Agregamos el evento click al botón</span>
+<span class="el">btnHackaton03</span>.<span class="ev">addEventListener</span>(<span class="st">'click'</span>, <span class="fn">() =></span> {
+
+    <span class="cm text-gray-500">// 3. Convertimos el valor del input a número</span>
+    <span class="fn">const</span> <span class="st">valor</span> = <span class="ev">Number</span>(<span class="el">inputHackaton03</span>.<span class="st">value</span>);
+
+    <span class="cm text-gray-500">// 4. Validamos que sea un número</span>
+    <span class="fn">if</span> (<span class="ev">isNaN</span>(<span class="st">valor</span>) || <span class="el">inputHackaton03</span>.<span class="st">value</span> === <span class="st">''</span>) {
+        <span class="fn">return</span> <span class="ev">alert</span>(<span class="st">'No es un número válido'</span>);
+    }
+
+    <span class="cm text-gray-500">// 5. Verificamos si tiene 3 dígitos (100-999)</span>
+    <span class="fn">if</span> (<span class="st">valor</span> >= <span class="nb">100</span> && <span class="st">valor</span> <= <span class="nb">999</span>) {
+        <span class="ev">alert</span>(<span class="st">'✅ El número tiene 3 dígitos'</span>);
+    } <span class="fn">else</span> {
+        <span class="ev">alert</span>(<span class="st">'❌ El número NO tiene 3 dígitos'</span>);
+    }
+<span class="fn">}</span>);
+</code></pre> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Ejercicio 38 ======= -->
+    <section class="max-w-2xl mx-auto mt-12 px-4">
+      <!-- Encabezado desplegable -->
+      <button
+        data-ejercicio="ej38"
+        class="btn-accordion w-full flex items-center gap-4 p-4 bg-gray-800 rounded-2xl cursor-pointer hover:bg-gray-750 transition-colors group"
+      >
+        <span
+          class="w-12 h-12 rounded-xl bg-accent/15 text-accent font-bold flex items-center justify-center shrink-0"
+          >38</span
+        >
+        <p class="text-sm md:text-base flex-1">
+          Hacer un algoritmo en JavaScript que nos permita saber si un número es
+          un número perfecto.
+        </p>
+        <svg
+          id="arrow-ej38"
+          class="accordion-arrow w-5 h-5 text-gray-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Contenido desplegable -->
+      <div class="accordion-content" id="ej38">
+        <div class="mt-3 space-y-4">
+          <!-- Input + Botón -->
+          <div class="flex flex-row justify-center items-center gap-4 py-2">
+            <input
+              type="text"
+              id="input_ej38"
+              placeholder="Ingresa el número de horas trabajadas:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-full max-w-xs outline-none"
+            />
+            <button
+              id="btn_ej38"
+              data-resultado="resultado_ej38"
+              class="bg-blue-500 px-6 py-2.5 text-white text-sm font-medium rounded-lg hover:bg-blue-400 cursor-pointer transition-all duration-300 shrink-0"
+            >
+              Enviar
+            </button>
+          </div>
+
+          <!-- Resultado -->
+          <div
+            id="resultado_ej38"
             class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
           ></div>
 

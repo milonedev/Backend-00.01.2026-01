@@ -205,6 +205,53 @@ btnEj6.addEventListener("click", () => {
   return;
 });
 
+// ====== Lógica del Ejercicio 37 ======
+const btnEj37 = document.getElementById("btn_ej37");
+const inputEj37 = document.getElementById("input_ej37");
+
+btnEj37.addEventListener("click", () => {
+  const valor = Number(inputEj37.value);
+
+  const idResult = btnEj37.dataset.resultado;
+  // Validar que sea número
+  if (isNaN(valor) || inputEj37.value.trim() === "" || valor < 1) {
+    showResult(idResult, "⚠️ No es un número válido, debe ser mayor a 1", true);
+    return;
+  }
+
+  return;
+});
+
+// ====== Lógica del Ejercicio 38 ======
+const btnEj38 = document.getElementById("btn_ej38");
+const inputEj38 = document.getElementById("input_ej38");
+
+btnEj38.addEventListener("click", () => {
+  const valor = Number(inputEj38.value);
+
+  const idResult = btnEj38.dataset.resultado;
+  // Validar que sea número
+  if (isNaN(valor) || inputEj38.value.trim() === "" || valor < 1) {
+    showResult(idResult, "⚠️ No es un número válido, debe ser mayor a 1", true);
+    return;
+  }
+
+  let s = 0;
+  let div = [];
+
+  for (let i = 1; i < valor; i++) {
+    if (valor % i === 0) {
+      s += i;
+      console.log(i)
+      div.push(i);
+    }
+  }
+
+  const str = `Divisores de ${valor}: ${div.join(" + ")} = ${s} \n ${s === valor ? "Es perfecto" : "No es perfecto."}`;
+  showResult(idResult, str, false);
+
+  return;
+});
 
 // ====== Lógica del Ejercicio 39 ======
 const btnEj39 = document.getElementById("btn_ej39");
@@ -222,15 +269,14 @@ btnEj39.addEventListener("click", () => {
 
   let pi = 0;
 
-  for(let i = 0; i < valor; i++) {
-    pi += ((-1)**i) * (4/(2 * i + 1))
+  for (let i = 0; i < valor; i++) {
+    pi += (-1) ** i * (4 / (2 * i + 1));
   }
-  const str = `π ≈ ${pi}\nπ real: ${Math.PI}\nError: ${Math.abs(pi - Math.PI).toFixed(12)}\nIteraciones: ${valor.toLocaleString()}`
+  const str = `π ≈ ${pi}\nπ real: ${Math.PI}\nError: ${Math.abs(pi - Math.PI).toFixed(12)}\nIteraciones: ${valor.toLocaleString()}`;
 
   showResult(idResult, str, false);
   return;
 });
-
 
 // ====== Lógica del Ejercicio 40 ======
 const btnEj40 = document.getElementById("btn_ej40");
@@ -251,7 +297,7 @@ btnEj40.addEventListener("click", () => {
   for (let i = 0; i < valor; i++) {
     let d = 2 + 2 * i;
     // console.log((4 / (d * (d + 1) * (d + 2))))
-    pi += ((-1) ** i) * (4 / (d * (d + 1) * (d + 2)));
+    pi += (-1) ** i * (4 / (d * (d + 1) * (d + 2)));
   }
   const str = `π ≈ ${pi}\nπ real: ${Math.PI}\nError: ${Math.abs(pi - Math.PI).toFixed(15)}\nIteraciones: ${valor.toLocaleString()}\n`;
 
