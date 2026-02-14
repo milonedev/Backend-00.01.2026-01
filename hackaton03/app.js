@@ -205,20 +205,201 @@ btnEj6.addEventListener("click", () => {
   return;
 });
 
-// ====== Lógica del Ejercicio 37 ======
-const btnEj37 = document.getElementById("btn_ej37");
-const inputEj37 = document.getElementById("input_ej37");
+// ====== Lógica del Ejercicio 13 ======
+const btnEj13 = document.getElementById("btn_ej13");
+const inputEj13 = document.getElementById("input_ej13");
 
-btnEj37.addEventListener("click", () => {
-  const valor = Number(inputEj37.value);
+btnEj13.addEventListener("click", () => {
+  const valor = inputEj13.value;
 
-  const idResult = btnEj37.dataset.resultado;
+  const idResult = btnEj13.dataset.resultado;
+  // // Validar que sea número
+  // if (isNaN(valor) || inputEj24.value.trim() === "") {
+  //   showResult(idResult, "⚠️ Debes ingresar 20 numeros.", true);
+  //   return;
+  // }
+
+  const arrarDeVocale = ['a', 'e', 'i', 'o', 'u']
+
+  const minus = valor.toLowerCase()
+
+  const str = `${arrarDeVocale.includes(minus) ? 'Si es una vocal' : 'No es una vocal'}`;
+
+  showResult(idResult, str, false);
+  return;
+});
+
+// ====== Lógica del Ejercicio 24 ======
+const btnEj24 = document.getElementById("btn_ej24");
+// const inputEj24 = document.getElementById("input_ej24");
+
+btnEj24.addEventListener("click", () => {
+  // const valor = inputEj24.value;
+
+  const idResult = btnEj24.dataset.resultado;
+  // // Validar que sea número
+  // if (isNaN(valor) || inputEj24.value.trim() === "") {
+  //   showResult(idResult, "⚠️ Debes ingresar 20 numeros.", true);
+  //   return;
+  // }
+
+  let acumulador = 0;
+
+  for (let i = 1; i <= 1000; i++) {
+    if (i % 2 === 0) {
+      acumulador = acumulador + i;
+    } else {
+      // console.log("impar: ", i);
+    }
+  }
+  // console.log(acumulador);
+
+  const str = `La suma de los pares hasta el 1000 es de: ${acumulador}`;
+  showResult(idResult, str, false);
+  return;
+});
+
+// ====== Lógica del Ejercicio 34 ======
+const btnEj34 = document.getElementById("btn_ej34");
+const inputEj34 = document.getElementById("input_ej34");
+const resultContainer = document.getElementById("resultado_ej34");
+
+btnEj34.addEventListener("click", () => {
+  const valor = inputEj34.value;
+
+  const idResult = btnEj34.dataset.resultado;
   // Validar que sea número
-  if (isNaN(valor) || inputEj37.value.trim() === "" || valor < 1) {
+  if (isNaN(valor) || inputEj34.value.trim() === "") {
+    showResult(idResult, "⚠️ Debes ingresar 20 numeros.", true);
+    return;
+  }
+
+  for (let i = 1; i <= valor; i++) {
+    const card = document.createElement("div");
+    const title = document.createElement("span");
+
+    card.className =
+      "w-full h-auto min-h-[32px] bg-gray-500 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center flex items-center justify-center flex-col gap-2";
+    title.className =
+      "border border-accent/30 h-10 w-10 flex items-center justify-center rounded-full bg-gray-900";
+
+    card.appendChild(title);
+    for (let j = 0; j <= 12; j++) {
+      title.innerHTML = i;
+      const p = document.createElement("p");
+
+      p.innerHTML = `${i} X ${j} = ${i * j}`;
+
+      card.appendChild(p);
+    }
+
+    resultContainer.appendChild(card);
+    // resultContainer.appendChild(title)
+  }
+
+  resultContainer.classList.remove("hidden");
+  resultContainer.classList.add("grid");
+
+  const str = ``;
+  // showResult(idResult, str, false);
+  return;
+});
+
+// ====== Lógica del Ejercicio 35 ======
+const btnEj35 = document.getElementById("btn_ej35");
+const inputEj35 = document.getElementById("input_ej35");
+
+btnEj35.addEventListener("click", () => {
+  const valor = inputEj35.value;
+
+  const numeros = valor.split(",").map(Number);
+  // "1,2,3,4,5,6..."
+  //[1,2,3,4,5,6..]
+  const idResult = btnEj35.dataset.resultado;
+  // Validar que sea número
+  if (numeros.length !== 20) {
+    showResult(idResult, "⚠️ Debes ingresar 20 numeros.", true);
+    return;
+  }
+
+  const mayor = Math.max(...numeros);
+  const menor = Math.min(...numeros);
+
+  const str = `El numero mayor es: ${mayor}, el menor es: ${menor}`;
+
+  showResult(idResult, str, false);
+  return;
+});
+
+// ====== Lógica del Ejercicio 36 ======
+const btnEj36 = document.getElementById("btn_ej36");
+const inputEj36 = document.getElementById("input_ej36");
+
+btnEj36.addEventListener("click", () => {
+  const valor = Number(inputEj36.value);
+
+  const idResult = btnEj36.dataset.resultado;
+  // Validar que sea número
+  if (isNaN(valor) || inputEj36.value.trim() === "" || valor < 1) {
     showResult(idResult, "⚠️ No es un número válido, debe ser mayor a 1", true);
     return;
   }
 
+  let a = 0,
+    b = 1,
+    serie = [];
+
+  for (let i = 0; i < valor; i++) {
+    serie.push(a);
+    let t = a + b;
+    a = b;
+    b = t;
+  }
+
+  const str = `Fibonacci(${valor}) = ${serie.join(", ")}`;
+
+  showResult(idResult, str, false);
+  return;
+});
+
+// ====== Lógica del Ejercicio 37 ======
+const btnEj37 = document.getElementById("btn_ej37");
+const inputEj371 = document.getElementById("input_ej371");
+const inputEj372 = document.getElementById("input_ej372");
+
+btnEj37.addEventListener("click", () => {
+  const valor = Number(inputEj371.value);
+  const valor2 = Number(inputEj372.value);
+
+  const idResult = btnEj37.dataset.resultado;
+  // Validar que sea número
+  if (
+    isNaN(valor) ||
+    inputEj371.value.trim() === "" ||
+    valor < 1 ||
+    isNaN(valor2) ||
+    inputEj372.value.trim() === "" ||
+    valor2 < 1
+  ) {
+    showResult(idResult, "⚠️ No es un número válido, debe ser mayor a 1", true);
+    return;
+  }
+
+  const num1 = valor,
+    num2 = valor2;
+
+  let x = valor,
+    y = valor2;
+
+  while (y !== 0) {
+    let t = y;
+    y = x % y;
+    x = t;
+  }
+
+  const str = `MCD(${num1}, ${num2}) = ${x}`;
+
+  showResult(idResult, str, false);
   return;
 });
 
@@ -242,7 +423,7 @@ btnEj38.addEventListener("click", () => {
   for (let i = 1; i < valor; i++) {
     if (valor % i === 0) {
       s += i;
-      console.log(i)
+      console.log(i);
       div.push(i);
     }
   }
