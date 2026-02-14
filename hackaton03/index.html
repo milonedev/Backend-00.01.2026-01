@@ -7,7 +7,88 @@
 
     <title>Hackaton03</title>
   </head>
-  <body>
-    <h2 class="text-red-400">Hola mundo!</h2>
+  <style>
+    pre {
+      tab-size: 2;
+    }
+    code {
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    .fn {
+      color: #aa65ef;
+    } /* functions */
+    .ev-listener {
+      color: #86ef63;
+    } /* event */
+    .ev {
+      color: #f6f079;
+    } /* event */
+    .el {
+      color: #de8b10;
+    } /* element */
+    .st {
+      color: #86ef63;
+    } /* strings */
+
+    .nb {
+      color: #f19411;
+    } /* numbers */
+    .op {
+      color: #e05b52;
+    } /* operators */
+  </style>
+  <body class="">
+    <h1>Hackaton 03</h1>
+
+    <div class="w-full">
+      <p>
+        Hacer un algoritmo en JavaScript que lea un número por el teclado y
+        determinar si tiene tres dígitos.
+      </p>
+
+      <div class="w-full h-auto flex flex-row justify-center items-center py-1 gap-10">
+
+          <input
+            type="text"
+            id="input_hackaton03"
+            class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body max-w-xs"
+          />
+
+          <!-- <input id="" type="text" /> -->
+          <button
+            id="btn_hackaton03"
+            class="bg-blue-400 px-6 py-1 text-white rounded-lg hover:cursor-pointer hover:bg-blue-300 transition-all ease-in-out duration-300"
+          >
+            Enviar
+          </button>
+
+      </div>
+      <div
+        class="bg-gray-700 max-w-lg shadow-xl rounded-3xl mx-auto"
+        id="contenedor_solucion_hackaton01"
+      >
+        <pre
+          class="bg-midnight rounded-xl p-4 text-sm overflow-x-auto mb-4 border border-white/5"
+        >
+<code><span class="el">btn_hackaton03</span>.<span class="ev">addEventListener</span>(<span class="st">'click'</span>, <span class="fn">() => {</span>
+
+    <span class="fn">const</span> <span class="st">valor</span> = <span class="ev">Number</span>(<span class="el">inputEjercicio1</span>.<span class="st">value</span>);
+
+    <span class="fn">if</span>(<span class="ev">isNaN</span>(<span class="st">valor</span>)) {
+        <span class="fn">return</span> <span class="ev">alert</span>(<span class="st">'No es numero'</span>);
+    }
+
+    <span class="fn">if</span>(<span class="st">valor</span> >= <span class="nu">100</span> && <span class="st">valor</span> <= <span class="nu">999</span>) {
+        <span class="fn">return</span> <span class="ev">alert</span>(<span class="st">'El numero tiene 3 cifras.'</span>);
+    }
+
+<span class="fn">});</span>
+</code>
+</pre>
+      </div>
+    </div>
   </body>
+
+  <script src="./app.js"></script>
 </html>
