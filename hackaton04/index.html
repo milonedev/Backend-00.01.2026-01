@@ -531,7 +531,7 @@ const inputEj52Num = document.getElementById("input_ej52_num"); -->
       </div>
     </section>
 
-    <!-- ======= Ejercicio 5 ======= -->
+    <!-- ======= Ejercicio 6 ======= -->
     <section class="max-w-2xl mx-auto mt-12 px-4">
       <!-- Encabezado desplegable -->
       <button
@@ -563,7 +563,6 @@ const inputEj52Num = document.getElementById("input_ej52_num"); -->
         <div class="mt-3 space-y-4">
           <!-- Input + Botón -->
           <div class="flex flex-row justify-center items-center gap-4 py-2">
-          
             <button
               id="btn_ej6"
               data-resultado="resultado_ej6"
@@ -576,6 +575,862 @@ const inputEj52Num = document.getElementById("input_ej52_num"); -->
           <!-- Resultado -->
           <div
             id="resultado_ej6"
+            class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Ejercicio 08 ======= -->
+    <section class="max-w-2xl mx-auto mt-12 px-4">
+      <!-- Encabezado desplegable -->
+      <button
+        data-ejercicio="ej8"
+        class="btn-accordion w-full flex items-center gap-4 p-4 bg-gray-800 rounded-2xl cursor-pointer hover:bg-gray-750 transition-colors group"
+      >
+        <span
+          class="w-12 h-12 rounded-xl bg-accent/15 text-accent font-bold flex items-center justify-center shrink-0"
+          >08</span
+        >
+        <p class="text-sm md:text-base flex-1">
+          Cree una función que tome una matriz de matrices con números.
+          <br />
+          Devuelve una nueva matriz (única) con el mayor número de cada
+          uno.
+          <br />
+          findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]) ➞ <br/> [7, 90, 2]
+        </p>
+        <svg
+          id="arrow-ej8"
+          class="accordion-arrow w-5 h-5 text-gray-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Contenido desplegable -->
+      <div class="accordion-content" id="ej8">
+        <div class="mt-3 space-y-4">
+          <!-- Input + Botón -->
+          <div class="flex flex-row justify-center items-center gap-4 py-2">
+            <!-- <input
+              type="text"
+              id="input_ej10_2"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-[65px] max-w-xs outline-none"
+            /> -->
+            <button
+              id="btn_ej8"
+              data-resultado="resultado_ej8"
+              class="bg-blue-500 px-6 py-2.5 text-white text-sm font-medium rounded-lg hover:bg-blue-400 cursor-pointer transition-all duration-300 shrink-0"
+            >
+              Enviar
+            </button>
+          </div>
+
+          <!-- Resultado -->
+          <div
+            id="resultado_ej8"
+            class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Ejercicio 10 -9 ======= -->
+    <section class="max-w-2xl mx-auto mt-12 px-4">
+      <!-- Encabezado desplegable -->
+      <button
+        data-ejercicio="ej10"
+        class="btn-accordion w-full flex items-center gap-4 p-4 bg-gray-800 rounded-2xl cursor-pointer hover:bg-gray-750 transition-colors group"
+      >
+        <span
+          class="w-12 h-12 rounded-xl bg-accent/15 text-accent font-bold flex items-center justify-center shrink-0"
+          >10</span
+        >
+        <p class="text-sm md:text-base flex-1">
+          Dada una palabra, escriba una función que devuelva el primer índice y
+          el último índice de un carácter.
+          <br />
+          charIndex("hello", "l") ➞ [2, 3] <br />
+          // The first "l" has index 2, the last "l" has index 3. <br />
+
+          charIndex("circumlocution", "c") ➞ [0, 8] <br />
+          // The first "c" has index 0, the last "c" has index 8. <br />
+        </p>
+        <svg
+          id="arrow-ej10"
+          class="accordion-arrow w-5 h-5 text-gray-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Contenido desplegable -->
+      <div class="accordion-content" id="ej10">
+        <div class="mt-3 space-y-4">
+          <!-- Input + Botón -->
+          <div class="flex flex-row justify-center items-center gap-4 py-2">
+            <input
+              type="text"
+              id="input_ej10_1"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-[65px] max-w-xs outline-none"
+            />
+            <input
+              type="text"
+              id="input_ej10_2"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-[65px] max-w-xs outline-none"
+            />
+            <button
+              id="btn_ej10"
+              data-resultado="resultado_ej10"
+              class="bg-blue-500 px-6 py-2.5 text-white text-sm font-medium rounded-lg hover:bg-blue-400 cursor-pointer transition-all duration-300 shrink-0"
+            >
+              Enviar
+            </button>
+          </div>
+
+          <!-- Resultado -->
+          <div
+            id="resultado_ej10"
+            class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Ejercicio 11 ======= -->
+    <section class="max-w-2xl mx-auto mt-12 px-4">
+      <!-- Encabezado desplegable -->
+      <button
+        data-ejercicio="ej11"
+        class="btn-accordion w-full flex items-center gap-4 p-4 bg-gray-800 rounded-2xl cursor-pointer hover:bg-gray-750 transition-colors group"
+      >
+        <span
+          class="w-12 h-12 rounded-xl bg-accent/15 text-accent font-bold flex items-center justify-center shrink-0"
+          >11</span
+        >
+        <p class="text-sm md:text-base flex-1">
+          Cree una función que tome una matriz de estudiantes y devuelva una
+          matriz de nombres de estudiantes.
+          <br />
+          getBudgets([ <br />
+          { name: "John", age: 21, budget: 23000 }, <br />
+          { name: "Steve", age: 32, budget: 40000 }, <br />
+          { name: "Martin", age: 16, budget: 2700 } <br />
+          ]) ➞ 65700 <br />
+        </p>
+        <svg
+          id="arrow-ej11"
+          class="accordion-arrow w-5 h-5 text-gray-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Contenido desplegable -->
+      <div class="accordion-content" id="ej11">
+        <div class="mt-3 space-y-4">
+          <!-- Input + Botón -->
+          <div class="flex flex-row justify-center items-center gap-4 py-2">
+            <!-- <input
+              type="text"
+              id="input_ej13"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-[65px] max-w-xs outline-none"
+            /> -->
+            <button
+              id="btn_ej11"
+              data-resultado="resultado_ej11"
+              class="bg-blue-500 px-6 py-2.5 text-white text-sm font-medium rounded-lg hover:bg-blue-400 cursor-pointer transition-all duration-300 shrink-0"
+            >
+              Enviar
+            </button>
+          </div>
+
+          <!-- Resultado -->
+          <div
+            id="resultado_ej11"
+            class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Ejercicio 12 ======= -->
+    <section class="max-w-2xl mx-auto mt-12 px-4">
+      <!-- Encabezado desplegable -->
+      <button
+        data-ejercicio="ej12"
+        class="btn-accordion w-full flex items-center gap-4 p-4 bg-gray-800 rounded-2xl cursor-pointer hover:bg-gray-750 transition-colors group"
+      >
+        <span
+          class="w-12 h-12 rounded-xl bg-accent/15 text-accent font-bold flex items-center justify-center shrink-0"
+          >12</span
+        >
+        <p class="text-sm md:text-base flex-1">
+          Cree una función que tome una matriz de estudiantes y devuelva una
+          matriz de nombres de estudiantes.
+          <br />
+          getStudentNames([ <br />
+          { name: "Steve" }, <br />
+          { name: "Mike" }, <br />
+          { name: "John" } <br />
+          ]) ➞ ["Becky", "John", "Steve"] <br />
+        </p>
+        <svg
+          id="arrow-ej12"
+          class="accordion-arrow w-5 h-5 text-gray-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Contenido desplegable -->
+      <div class="accordion-content" id="ej12">
+        <div class="mt-3 space-y-4">
+          <!-- Input + Botón -->
+          <div class="flex flex-row justify-center items-center gap-4 py-2">
+            <!-- <input
+              type="text"
+              id="input_ej13"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-[65px] max-w-xs outline-none"
+            /> -->
+            <button
+              id="btn_ej12"
+              data-resultado="resultado_ej12"
+              class="bg-blue-500 px-6 py-2.5 text-white text-sm font-medium rounded-lg hover:bg-blue-400 cursor-pointer transition-all duration-300 shrink-0"
+            >
+              Enviar
+            </button>
+          </div>
+
+          <!-- Resultado -->
+          <div
+            id="resultado_ej12"
+            class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Ejercicio 13 ======= -->
+    <section class="max-w-2xl mx-auto mt-12 px-4">
+      <!-- Encabezado desplegable -->
+      <button
+        data-ejercicio="ej13"
+        class="btn-accordion w-full flex items-center gap-4 p-4 bg-gray-800 rounded-2xl cursor-pointer hover:bg-gray-750 transition-colors group"
+      >
+        <span
+          class="w-12 h-12 rounded-xl bg-accent/15 text-accent font-bold flex items-center justify-center shrink-0"
+          >13</span
+        >
+        <p class="text-sm md:text-base flex-1">
+          Escriba una función que convierta un objeto en una matriz de claves y
+          valores.
+          <br />
+          objectToArray({ <br />
+          likes: 2, <br />
+          dislikes: 3, <br />
+          followers: 10 <br />
+          }) ➞ [["likes", 2], ["dislikes", 3], ["followers", 10]] <br />
+        </p>
+        <svg
+          id="arrow-ej13"
+          class="accordion-arrow w-5 h-5 text-gray-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Contenido desplegable -->
+      <div class="accordion-content" id="ej13">
+        <div class="mt-3 space-y-4">
+          <!-- Input + Botón -->
+          <div class="flex flex-row justify-center items-center gap-4 py-2">
+            <!-- <input
+              type="text"
+              id="input_ej13"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-[65px] max-w-xs outline-none"
+            /> -->
+            <button
+              id="btn_ej13"
+              data-resultado="resultado_ej13"
+              class="bg-blue-500 px-6 py-2.5 text-white text-sm font-medium rounded-lg hover:bg-blue-400 cursor-pointer transition-all duration-300 shrink-0"
+            >
+              Enviar
+            </button>
+          </div>
+
+          <!-- Resultado -->
+          <div
+            id="resultado_ej13"
+            class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Ejercicio 14 ======= -->
+    <section class="max-w-2xl mx-auto mt-12 px-4">
+      <!-- Encabezado desplegable -->
+      <button
+        data-ejercicio="ej14"
+        class="btn-accordion w-full flex items-center gap-4 p-4 bg-gray-800 rounded-2xl cursor-pointer hover:bg-gray-750 transition-colors group"
+      >
+        <span
+          class="w-12 h-12 rounded-xl bg-accent/15 text-accent font-bold flex items-center justify-center shrink-0"
+          >14</span
+        >
+        <p class="text-sm md:text-base flex-1">
+          Cree una función donde, dado el número n, devuelva la suma de todos
+          los números cuadrados incluyendo n.
+          <br />
+          squaresSum(3) ➞ 14 <br />
+          // 1² + 2² + 3² = <br />
+          // 1 + 4 + 9 = <br />
+          // 14 <br />
+        </p>
+        <svg
+          id="arrow-ej14"
+          class="accordion-arrow w-5 h-5 text-gray-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Contenido desplegable -->
+      <div class="accordion-content" id="ej14">
+        <div class="mt-3 space-y-4">
+          <!-- Input + Botón -->
+          <div class="flex flex-row justify-center items-center gap-4 py-2">
+            <input
+              type="text"
+              id="input_ej14"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-[65px] max-w-xs outline-none"
+            />
+            <button
+              id="btn_ej14"
+              data-resultado="resultado_ej14"
+              class="bg-blue-500 px-6 py-2.5 text-white text-sm font-medium rounded-lg hover:bg-blue-400 cursor-pointer transition-all duration-300 shrink-0"
+            >
+              Enviar
+            </button>
+          </div>
+
+          <!-- Resultado -->
+          <div
+            id="resultado_ej14"
+            class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Ejercicio 15 ======= -->
+    <section class="max-w-2xl mx-auto mt-12 px-4">
+      <!-- Encabezado desplegable -->
+      <button
+        data-ejercicio="ej15"
+        class="btn-accordion w-full flex items-center gap-4 p-4 bg-gray-800 rounded-2xl cursor-pointer hover:bg-gray-750 transition-colors group"
+      >
+        <span
+          class="w-12 h-12 rounded-xl bg-accent/15 text-accent font-bold flex items-center justify-center shrink-0"
+          >15</span
+        >
+        <p class="text-sm md:text-base flex-1">
+          Cree una función para multiplicar todos los valores en una matriz por
+          la cantidad de valores en la matriz dada
+          <br />
+          multiplyByLength([2, 3, 1, 0]) ➞ [8, 12, 4, 0]
+        </p>
+        <svg
+          id="arrow-ej15"
+          class="accordion-arrow w-5 h-5 text-gray-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Contenido desplegable -->
+      <div class="accordion-content" id="ej15">
+        <div class="mt-3 space-y-4">
+          <!-- Input + Botón -->
+          <div class="flex flex-row justify-center items-center gap-4 py-2">
+            <input
+              type="text"
+              id="input_ej15"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-[65px] max-w-xs outline-none"
+            />
+            <button
+              id="btn_ej15"
+              data-resultado="resultado_ej15"
+              class="bg-blue-500 px-6 py-2.5 text-white text-sm font-medium rounded-lg hover:bg-blue-400 cursor-pointer transition-all duration-300 shrink-0"
+            >
+              Enviar
+            </button>
+          </div>
+
+          <!-- Resultado -->
+          <div
+            id="resultado_ej15"
+            class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Ejercicio 16 ======= -->
+    <section class="max-w-2xl mx-auto mt-12 px-4">
+      <!-- Encabezado desplegable -->
+      <button
+        data-ejercicio="ej16"
+        class="btn-accordion w-full flex items-center gap-4 p-4 bg-gray-800 rounded-2xl cursor-pointer hover:bg-gray-750 transition-colors group"
+      >
+        <span
+          class="w-12 h-12 rounded-xl bg-accent/15 text-accent font-bold flex items-center justify-center shrink-0"
+          >16</span
+        >
+        <p class="text-sm md:text-base flex-1">
+          Cree una función que tome un número como argumento y devuelva una
+          matriz de números contando desde este número a cero.
+          <br />
+          countdown(5) ➞ [5, 4, 3, 2, 1, 0]
+        </p>
+        <svg
+          id="arrow-ej16"
+          class="accordion-arrow w-5 h-5 text-gray-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Contenido desplegable -->
+      <div class="accordion-content" id="ej16">
+        <div class="mt-3 space-y-4">
+          <!-- Input + Botón -->
+          <div class="flex flex-row justify-center items-center gap-4 py-2">
+            <input
+              type="text"
+              id="input_ej16"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-[65px] max-w-xs outline-none"
+            />
+            <button
+              id="btn_ej16"
+              data-resultado="resultado_ej16"
+              class="bg-blue-500 px-6 py-2.5 text-white text-sm font-medium rounded-lg hover:bg-blue-400 cursor-pointer transition-all duration-300 shrink-0"
+            >
+              Enviar
+            </button>
+          </div>
+
+          <!-- Resultado -->
+          <div
+            id="resultado_ej16"
+            class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Ejercicio 17 ======= -->
+    <section class="max-w-2xl mx-auto mt-12 px-4">
+      <!-- Encabezado desplegable -->
+      <button
+        data-ejercicio="ej17"
+        class="btn-accordion w-full flex items-center gap-4 p-4 bg-gray-800 rounded-2xl cursor-pointer hover:bg-gray-750 transition-colors group"
+      >
+        <span
+          class="w-12 h-12 rounded-xl bg-accent/15 text-accent font-bold flex items-center justify-center shrink-0"
+          >17</span
+        >
+        <p class="text-sm md:text-base flex-1">
+          Cree una función que tome una matriz y devuelva la diferencia entre
+          los números más grandes y más pequeños.
+          <br />
+          diffMaxMin([10, 4, 1, 4, -10, -50, 32, 21]) ➞ 82 // Smallest number is
+          -50, biggest is 32.
+        </p>
+        <svg
+          id="arrow-ej17"
+          class="accordion-arrow w-5 h-5 text-gray-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Contenido desplegable -->
+      <div class="accordion-content" id="ej17">
+        <div class="mt-3 space-y-4">
+          <!-- Input + Botón -->
+          <div class="flex flex-row justify-center items-center gap-4 py-2">
+            <input
+              type="text"
+              id="input_ej17"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-[65px] max-w-xs outline-none"
+            />
+            <button
+              id="btn_ej17"
+              data-resultado="resultado_ej17"
+              class="bg-blue-500 px-6 py-2.5 text-white text-sm font-medium rounded-lg hover:bg-blue-400 cursor-pointer transition-all duration-300 shrink-0"
+            >
+              Enviar
+            </button>
+          </div>
+
+          <!-- Resultado -->
+          <div
+            id="resultado_ej17"
+            class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Ejercicio 18 ======= -->
+    <section class="max-w-2xl mx-auto mt-12 px-4">
+      <!-- Encabezado desplegable -->
+      <button
+        data-ejercicio="ej18"
+        class="btn-accordion w-full flex items-center gap-4 p-4 bg-gray-800 rounded-2xl cursor-pointer hover:bg-gray-750 transition-colors group"
+      >
+        <span
+          class="w-12 h-12 rounded-xl bg-accent/15 text-accent font-bold flex items-center justify-center shrink-0"
+          >18</span
+        >
+        <p class="text-sm md:text-base flex-1">
+          Cree una función que filtre las cadenas de una matriz y devuelva una
+          nueva matriz que solo contenga enteros.
+          <br />
+          filterList([1, 2, 3, "x", "y", 10]) ➞ [1, 2, 3, 10]
+        </p>
+        <svg
+          id="arrow-ej18"
+          class="accordion-arrow w-5 h-5 text-gray-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Contenido desplegable -->
+      <div class="accordion-content" id="ej18">
+        <div class="mt-3 space-y-4">
+          <!-- Input + Botón -->
+          <div class="flex flex-row justify-center items-center gap-4 py-2">
+            <input
+              type="text"
+              id="input_ej18"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-[65px] max-w-xs outline-none"
+            />
+            <button
+              id="btn_ej18"
+              data-resultado="resultado_ej18"
+              class="bg-blue-500 px-6 py-2.5 text-white text-sm font-medium rounded-lg hover:bg-blue-400 cursor-pointer transition-all duration-300 shrink-0"
+            >
+              Enviar
+            </button>
+          </div>
+
+          <!-- Resultado -->
+          <div
+            id="resultado_ej18"
+            class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Ejercicio 19 ======= -->
+    <section class="max-w-2xl mx-auto mt-12 px-4">
+      <!-- Encabezado desplegable -->
+      <button
+        data-ejercicio="ej19"
+        class="btn-accordion w-full flex items-center gap-4 p-4 bg-gray-800 rounded-2xl cursor-pointer hover:bg-gray-750 transition-colors group"
+      >
+        <span
+          class="w-12 h-12 rounded-xl bg-accent/15 text-accent font-bold flex items-center justify-center shrink-0"
+          >19</span
+        >
+        <p class="text-sm md:text-base flex-1">
+          Cree una función que tome dos argumentos (elemento, tiempos). El
+          primer argumento (elemento) es el elemento que necesita repetirse,
+          mientras que el segundo argumento (veces) es la cantidad de veces que
+          se debe repetir el elemento. Devuelve el resultado en una matriz.
+          <br />
+          repeat(13, 5) ➞ [13, 13, 13, 13, 13]
+        </p>
+        <svg
+          id="arrow-ej19"
+          class="accordion-arrow w-5 h-5 text-gray-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Contenido desplegable -->
+      <div class="accordion-content" id="ej19">
+        <div class="mt-3 space-y-4">
+          <!-- Input + Botón -->
+          <div class="flex flex-row justify-center items-center gap-4 py-2">
+            <input
+              type="text"
+              id="input_ej19_1"
+              maxlength="4"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-[65px] max-w-xs outline-none"
+            />
+            <input
+              type="text"
+              id="input_ej19_2"
+              maxlength="2"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-[45px] max-w-xs outline-none"
+            />
+            <button
+              id="btn_ej19"
+              data-resultado="resultado_ej19"
+              class="bg-blue-500 px-6 py-2.5 text-white text-sm font-medium rounded-lg hover:bg-blue-400 cursor-pointer transition-all duration-300 shrink-0"
+            >
+              Enviar
+            </button>
+          </div>
+
+          <!-- Resultado -->
+          <div
+            id="resultado_ej19"
+            class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Ejercicio 20 ======= -->
+    <section class="max-w-2xl mx-auto mt-12 px-4">
+      <!-- Encabezado desplegable -->
+      <button
+        data-ejercicio="ej20"
+        class="btn-accordion w-full flex items-center gap-4 p-4 bg-gray-800 rounded-2xl cursor-pointer hover:bg-gray-750 transition-colors group"
+      >
+        <span
+          class="w-12 h-12 rounded-xl bg-accent/15 text-accent font-bold flex items-center justify-center shrink-0"
+          >20</span
+        >
+        <p class="text-sm md:text-base flex-1">
+          Escriba una función, .vreplace () que extienda el prototipo de cadena
+          reemplazando todas las vocales en una cadena con una vocal
+          especificada.
+        </p>
+        <svg
+          id="arrow-ej20"
+          class="accordion-arrow w-5 h-5 text-gray-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Contenido desplegable -->
+      <div class="accordion-content" id="ej20">
+        <div class="mt-3 space-y-4">
+          <!-- Input + Botón -->
+          <div class="flex flex-row justify-center items-center gap-4 py-2">
+            <input
+              type="text"
+              id="input_ej20_1"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-full max-w-xs outline-none"
+            />
+            <input
+              type="text"
+              id="input_ej20_2"
+              maxlength="1"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-[45px] max-w-xs outline-none"
+            />
+            <button
+              id="btn_ej20"
+              data-resultado="resultado_ej20"
+              class="bg-blue-500 px-6 py-2.5 text-white text-sm font-medium rounded-lg hover:bg-blue-400 cursor-pointer transition-all duration-300 shrink-0"
+            >
+              Enviar
+            </button>
+          </div>
+
+          <!-- Resultado -->
+          <div
+            id="resultado_ej20"
+            class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Ejercicio 21 ======= -->
+    <section class="max-w-2xl mx-auto mt-12 px-4">
+      <!-- Encabezado desplegable -->
+      <button
+        data-ejercicio="ej21"
+        class="btn-accordion w-full flex items-center gap-4 p-4 bg-gray-800 rounded-2xl cursor-pointer hover:bg-gray-750 transition-colors group"
+      >
+        <span
+          class="w-12 h-12 rounded-xl bg-accent/15 text-accent font-bold flex items-center justify-center shrink-0"
+          >21</span
+        >
+        <p class="text-sm md:text-base flex-1">
+          Te dan una cadena de palabras. Debe encontrar la palabra "Nemo" y
+          devolver una cadena como esta: "¡Encontré a Nemo en [el orden de la
+          palabra que encuentra nemo]!".
+        </p>
+        <svg
+          id="arrow-ej21"
+          class="accordion-arrow w-5 h-5 text-gray-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Contenido desplegable -->
+      <div class="accordion-content" id="ej21">
+        <div class="mt-3 space-y-4">
+          <!-- Input + Botón -->
+          <div class="flex flex-row justify-center items-center gap-4 py-2">
+            <input
+              type="text"
+              id="input_ej21_1"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-full max-w-xs outline-none"
+            />
+
+            <button
+              id="btn_ej21"
+              data-resultado="resultado_ej21"
+              class="bg-blue-500 px-6 py-2.5 text-white text-sm font-medium rounded-lg hover:bg-blue-400 cursor-pointer transition-all duration-300 shrink-0"
+            >
+              Enviar
+            </button>
+          </div>
+
+          <!-- Resultado -->
+          <div
+            id="resultado_ej21"
+            class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Ejercicio 22 ======= -->
+    <section class="max-w-2xl mx-auto mt-12 px-4">
+      <!-- Encabezado desplegable -->
+      <button
+        data-ejercicio="ej22"
+        class="btn-accordion w-full flex items-center gap-4 p-4 bg-gray-800 rounded-2xl cursor-pointer hover:bg-gray-750 transition-colors group"
+      >
+        <span
+          class="w-12 h-12 rounded-xl bg-accent/15 text-accent font-bold flex items-center justify-center shrink-0"
+          >22</span
+        >
+        <p class="text-sm md:text-base flex-1">
+          Cree una función que capitalice la última letra de cada palabra.
+          <br />
+          capLast("hello") ➞ "hellO"
+        </p>
+        <svg
+          id="arrow-ej22"
+          class="accordion-arrow w-5 h-5 text-gray-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <!-- Contenido desplegable -->
+      <div class="accordion-content" id="ej22">
+        <div class="mt-3 space-y-4">
+          <!-- Input + Botón -->
+          <div class="flex flex-row justify-center items-center gap-4 py-2">
+            <input
+              type="text"
+              id="input_ej22_1"
+              placeholder="Ingrese base:"
+              class="bg-gray-800 border border-gray-600 text-white text-sm rounded-lg focus:ring-accent focus:border-accent px-3 py-2.5 w-full max-w-xs outline-none"
+            />
+
+            <button
+              id="btn_ej22"
+              data-resultado="resultado_ej22"
+              class="bg-blue-500 px-6 py-2.5 text-white text-sm font-medium rounded-lg hover:bg-blue-400 cursor-pointer transition-all duration-300 shrink-0"
+            >
+              Enviar
+            </button>
+          </div>
+
+          <!-- Resultado -->
+          <div
+            id="resultado_ej22"
             class="hidden bg-gray-800 border border-accent/30 rounded-xl px-4 py-3 text-accent font-mono text-sm text-center"
           ></div>
         </div>
