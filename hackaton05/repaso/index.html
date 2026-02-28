@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script>
+    tailwind.config = {
+      theme: {
+        extends: {
+          fontFamily: {
+            mono: ["JetBrains Mono", "monospace"],
+            display: ["Outfit", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      background: #0a0a0f;
+      background-image:
+        radial-gradient(
+          ellipse at 20% 50%,
+          rgba(120, 80, 255, 0.08) 0%,
+          transparent 50%
+        ),
+        radial-gradient(
+          ellipse at 80% 20%,
+          rgba(255, 140, 50, 0.06) 0%,
+          transparent 50%
+        );
+      min-height: 100vh;
+    }
+  </style>
+  <body class="flex items-center justify-center font-display p-4">
+    <!-- Card -->
+    <div class="w-full max-w-sm">
+      <!-- header -->
+      <div
+        class="text-center text-white/80 text-sm font-medium uppercase tracking-[0.3em]"
+      >
+        <h1>Calculadora</h1>
+      </div>
+
+      <!-- Body -->
+
+      <div class="rounded-3xl p-5 shadow-2xl shadow-black/50">
+        <!-- display -->
+
+        <div class="bg-black/40 rounded-2xl p-5 mb-4 border border-white/5">
+          <div
+            id="operacionAnterior"
+            class="text-right text-white/30 text-sm font-mono h-5 truncate"
+          ></div>
+          <div
+            id="display"
+            class="text-right text-white text-4xl font-mono font-light tracking-tight mt-1 truncate"
+          >
+            0
+          </div>
+        </div>
+
+        <!-- Historial -->
+        <div id="historialContainer">
+          <div id="historial"></div>
+        </div>
+
+        <!-- Buttons -->
+
+        <div class="grid grid-cols-4 gap-2.5">
+          <!-- Primera fila -->
+          <button onclick="calculadora.limpiar()"
+            class="bg-red-500/15 hover:bg-red-500/25 text-red-400 font-semibold rounded-xl h-14 text-sm border border-red-500/10"
+          >
+            AC
+          </button>
+
+          <button onclick="calculadora.borrar()"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >⌫</button>
+
+          <button onclick="calculadora.porcentaje()"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            %
+          </button>
+
+          <button onclick="calculadora.setOperador('/')"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            /
+          </button>
+
+          <!-- Segunda Fila -->
+
+          <button onclick="calculadora.agregarNumero('7')"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            7
+          </button>
+          <button onclick="calculadora.agregarNumero('8')"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            8
+          </button>
+          <button onclick="calculadora.agregarNumero('9')"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            9
+          </button>
+          <button onclick="calculadora.setOperador('*')"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            x
+          </button>
+
+          <!-- Tercera Fila -->
+          <button onclick="calculadora.agregarNumero('4')"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            4
+          </button>
+
+          <button onclick="calculadora.agregarNumero('5')"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            5
+          </button>
+
+          <button onclick="calculadora.agregarNumero('6')"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            6
+          </button>
+
+          <button onclick="calculadora.setOperador('-')"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            -
+          </button>
+
+          <!-- Cuarta Fila -->
+
+          <button onclick="calculadora.agregarNumero('1')"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            1
+          </button>
+
+          <button onclick="calculadora.agregarNumero('2')"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            2
+          </button>
+
+          <button onclick="calculadora.agregarNumero('3')"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            3
+          </button>
+
+          <button onclick="calculadora.setOperador('+')"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            +
+          </button>
+
+          <!-- Quinta Fila -->
+
+          <button
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            +/-
+          </button>
+
+          <button onclick="calculadora.agregarNumero('0')"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            0
+          </button>
+
+          <button onclick="calculadora.agregarNumero('.')"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            .
+          </button>
+
+          <button onclick="calculadora.calcular()"
+            class="bg-white/5 hover:bg-white/10 text-white/60 font-semibold rounded-xl h-14 text-sm border border-white/5"
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    class Operacion {
+      #num1;
+      #num2;
+      #operador;
+      #simbolos = { "+": "+", "-": "-", "*": "x", "/": "÷" };
+
+      constructor(num1, operador, num2) {
+        this.#num1 = num1;
+        this.#num2 = num2;
+        this.#operador = operador;
+      }
+
+      ejecutar() {
+        const operaciones = {
+          "+": (a, b) => a + b,
+          "-": (a, b) => a - b,
+          "*": (a, b) => a * b,
+          "/": (a, b) => a / b,
+        };
+
+        const resultado = operaciones[this.#operador](this.#num1, this.#num2);
+
+        return resultado;
+      }
+
+      toString() {
+        const s = this.#simbolos[this.#operador];
+
+        return `${this.#num1} ${s} ${this.#num2}`;
+      }
+    }
+    class Historial {
+      #registros = [];
+      #maxRegistros;
+
+      constructor(maxregistros = 10) {
+        this.#maxRegistros = maxregistros;
+      }
+
+      agregar(expresion, resultado) {
+        this.#registros.unshift({ expresion, resultado });
+        if (this.#registros.length > this.#maxRegistros) {
+          this.#registros.pop();
+        }
+      }
+
+      obtenerTodos() {
+        return [...this.#registros];
+      }
+
+      limpiar() {
+        this.#registros = [];
+      }
+
+      get cantidad() {
+        return this.#registros.length;
+      }
+    }
+
+    class Pantalla {
+      #displayEl;
+      #operacionEl;
+      #historialEl;
+      #historialContainer;
+
+      constructor(displayId, operacionId, historialId, historialContainerId) {
+        this.#displayEl = document.getElementById(displayId);
+        this.#operacionEl = document.getElementById(operacionId);
+        this.#historialEl = document.getElementById(historialId);
+        this.#historialContainer =
+          document.getElementById(historialContainerId);
+      }
+
+      mostrarValor(valor) {
+        this.#displayEl.textContent = valor;
+      }
+
+      mostrarOperacion(texto) {
+        this.#operacionEl.textContent = texto;
+      }
+    }
+
+    class Calculadora {
+      #valorActual;
+      #valorAnterior;
+      #operador;
+      #resetPantalla;
+      #pantalla;
+      #historial;
+
+      constructor() {
+        this.#pantalla = new Pantalla(
+          "display",
+          "operacionAnterior",
+          "historial",
+          "historialContainer",
+        );
+        this.#historial = new Historial(15);
+        this.#valorActual = "0";
+        this.#valorAnterior = "";
+        this.#operador = null;
+        this.#resetPantalla = false;
+      }
+
+      agregarNumero(numero) {
+        if (numero === "." && this.#valorActual.includes(".")) return;
+
+        if (this.#resetPantalla) {
+          this.#valorActual = numero === "." ? "0." : numero;
+          this.#resetPantalla = false;
+        } else {
+          this.#valorActual =
+            this.#valorActual === "0" && numero !== "."
+              ? numero
+              : this.#valorActual + numero;
+        }
+        this.#pantalla.mostrarValor(this.#valorActual);
+      }
+
+      setOperador(op) {
+        if (this.#operador && this.#resetPantalla) {
+          this.calcular();
+        }
+
+        this.#valorAnterior = this.#valorActual;
+        this.#operador = op;
+        this.#resetPantalla = true;
+
+        const simbolos = { "+": "+", "-": "-", "*": "x", "/": "÷" };
+
+        this.#pantalla.mostrarOperacion(
+          `${this.#valorAnterior} ${simbolos[op]}`,
+        );
+      }
+
+      calcular() {
+        if (!this.#operador || this.#valorAnterior === "") return;
+
+        // alert(this.#operador);
+
+        try {
+          const operacion = new Operacion(
+            parseFloat(this.#valorAnterior),
+            this.#operador,
+            parseFloat(this.#valorActual),
+          );
+
+          const resultado = operacion.ejecutar();
+
+          this.#historial.agregar(operacion.toString(), resultado);
+
+          this.#pantalla.mostrarOperacion(`${operacion.toString()} =`);
+          this.#valorActual = resultado.toString();
+          this.#pantalla.mostrarValor(this.#valorActual);
+        } catch (error) {
+          // this.#pantalla.
+          this.#valorActual = 0;
+        }
+
+        this.#operador = null;
+        this.#valorAnterior = "";
+        this.#resetPantalla = true;
+      }
+
+      limpiar() {
+        this.#valorActual = "0";
+        this.#valorAnterior = "";
+        this.#operador = null;
+        this.#resetPantalla = false;
+        this.#pantalla.mostrarValor("0");
+        this.#pantalla.mostrarOperacion("");
+      }
+
+      borrar() {
+        if (this.#valorActual.length === 1 || this.#resetPantalla) {
+          this.#valorActual = "0";
+        } else {
+          this.#valorActual = this.#valorActual.slice(0, -1);
+        }
+
+        this.#pantalla.mostrarValor(this.#valorActual);
+      }
+
+      porcentaje() {
+        this.#valorActual = (parseFloat(this.#valorActual) / 100).toString();
+        this.#pantalla.mostrarValor(this.#valorActual);
+      }
+    }
+
+    const calculadora = new Calculadora();
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key >= "0" && e.key <= "9") calculadora.agregarNumero(e.key);
+      else if (e.key === "+") calculadora.setOperador("+");
+      else if (e.key === "-") calculadora.setOperador("-");
+      else if (e.key === "*") calculadora.setOperador("*");
+      else if (e.key === "/") {
+        e.preventDefault();
+        calculadora.setOperador("/");
+      } else if (e.key === "Enter" || e.key === "=") calculadora.calcular();
+      else if (e.key === "Escape") calculadora.limpiar();
+      else if (e.key === "Backspace") calculadora.borrar();
+      else if (e.key === "%") calculadora.porcentaje();
+    });
+  </script>
+</html>
