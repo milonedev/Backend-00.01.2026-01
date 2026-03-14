@@ -589,7 +589,6 @@
 
     // Map of geners
     let genreMap = {};
-
     async function loadGenred() {
       const data = await api("/genre/movie/list");
       data.genres?.forEach((g) => (genreMap[g.id] = g.name));
